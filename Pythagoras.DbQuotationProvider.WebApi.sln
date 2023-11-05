@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pythagoras.DbQuotationProvider.WebApi", "src\Pythagoras.DbQuotationProvider.WebApi\Pythagoras.DbQuotationProvider.WebApi.csproj", "{15D22D38-45F4-4EFD-A758-B219B4488BA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructue", "Infrastructue", "{D7D56D89-5BF7-47F5-9653-1C0FC0DCC85D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pythagoras.Infrastructure", "..\Pythagoras.Infrastructure\src\Pythagoras.Infrastructure\Pythagoras.Infrastructure.csproj", "{9C42DE3B-CE09-40B8-8BAA-B7F30A4B1F05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15D22D38-45F4-4EFD-A758-B219B4488BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D22D38-45F4-4EFD-A758-B219B4488BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D22D38-45F4-4EFD-A758-B219B4488BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D22D38-45F4-4EFD-A758-B219B4488BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C42DE3B-CE09-40B8-8BAA-B7F30A4B1F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C42DE3B-CE09-40B8-8BAA-B7F30A4B1F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C42DE3B-CE09-40B8-8BAA-B7F30A4B1F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C42DE3B-CE09-40B8-8BAA-B7F30A4B1F05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C42DE3B-CE09-40B8-8BAA-B7F30A4B1F05} = {D7D56D89-5BF7-47F5-9653-1C0FC0DCC85D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88987A8D-6B04-450C-90D5-B593AF7880DE}
+	EndGlobalSection
+EndGlobal
