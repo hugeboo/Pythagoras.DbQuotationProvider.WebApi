@@ -5,6 +5,8 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using NLog.Web;
 using Microsoft.AspNetCore.Http.Connections;
+using Pythagoras.Infrastructure.CubeClients.QProvider;
+using Pythagoras.Infrastructure.CubeServers.QProvider;
 
 namespace Pythagoras.DbQuotationProvider.WebApi
 {
@@ -55,7 +57,10 @@ namespace Pythagoras.DbQuotationProvider.WebApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options =>
             {
-                options.AddSignalRSwaggerGen();
+                options.AddSignalRSwaggerGen(options =>
+                {
+                    options.ScanAssembly(typeof(QProviderHub).Assembly);
+                });
             });
 
             builder.Logging.ClearProviders();
@@ -83,12 +88,11 @@ namespace Pythagoras.DbQuotationProvider.WebApi
 
             app.MapControllers();
 
-            // TODO: ...
-            //app.MapHub<ClockSignalHub>(ClockSignalClient.HUB_URL_PATH, options =>
-            //{
-            //    // only WebSockets
-            //    options.Transports = HttpTransportType.WebSockets;
-            //});
+            app.MapHub<QProviderHub>(QProviderClient.HUB_URL_PATH, options =>
+            {
+                // only WebSockets
+                options.Transports = HttpTransportType.WebSockets;
+            });
 
             app.Run();
         }
