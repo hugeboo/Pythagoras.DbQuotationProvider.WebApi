@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Pythagoras.Infrastructure\src\Pythagoras.Infrastructure\Pythagoras.Infrastructure.csproj" />
+    <ProjectReference Include="..\Pythagoras.DbQuotationProvider.Persistence\Pythagoras.DbQuotationProvider.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

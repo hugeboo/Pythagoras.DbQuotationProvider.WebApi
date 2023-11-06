@@ -7,6 +7,8 @@ using NLog.Web;
 using Microsoft.AspNetCore.Http.Connections;
 using Pythagoras.Infrastructure.CubeClients.QProvider;
 using Pythagoras.Infrastructure.CubeServers.QProvider;
+using Pythagoras.DbQuotationProvider.Persistence;
+using Microsoft.Extensions.Configuration;
 
 namespace Pythagoras.DbQuotationProvider.WebApi
 {
@@ -32,6 +34,11 @@ namespace Pythagoras.DbQuotationProvider.WebApi
             });
 
             // Add services to the container.
+
+            var appDbConnectionString = builder.Configuration.GetConnectionString("AppDb")
+                ?? throw new ArgumentException("Configuration 'ConnectionStrings:AppDb' is NULL");
+
+            builder.Services.AddRepository(appDbConnectionString);
 
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
